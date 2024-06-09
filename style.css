@@ -201,6 +201,11 @@ footer a {
   .greeting {
     width: 80%;
   }
+  .about-blurb {
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
 }
 
 @media (max-width: 470px) {
