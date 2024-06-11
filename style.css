@@ -183,6 +183,7 @@ h1 {
 .github-btn {
   display: none;
   margin: 0.5rem;
+  cursor: pointer;
 }
 
 /* About Me */
@@ -217,6 +218,10 @@ h1 {
   background-color: white;
   padding: 2rem;
   border: dotted 3px black;
+}
+
+#contact button {
+  cursor: pointer;
 }
 
 /* Footer */
