@@ -5,8 +5,6 @@ let links = [
   'https://jslegend.itch.io/p5-pokemon-prototype',
   'https://youtu.be/Zx2CBt72Ji8?si=Jkgl7MTUJQ7kPSbo',
 ];
-// console.log(btnContainers);
-// console.dir(btnContainers);
 
 for (let i = 0; i < btnContainers.length; i++) {
   let buttonLink = document.createElement('a');
@@ -25,11 +23,17 @@ for (let i = 0; i < btnContainers.length; i++) {
   buttonLink.append(githubBtn);
   btnContainers[i].append(buttonLink);
 
+  // projectCards[i].onmouseover = () => {
+  //   btnContainers[i].style.display = 'flex';
+  // };
+  // projectCards[i].onmouseout = () => {
+  //   btnContainers[i].style.display = 'none';
+  // };
+
   projectCards[i].onmouseover = () => {
-    btnContainers[i].style.display = 'flex';
+    githubBtn.style.display = 'block';
   };
   projectCards[i].onmouseout = () => {
-    btnContainers[i].style.display = 'none';
+    githubBtn.style.display = 'none';
   };
-  // btnContainers[i].append(buttonLink);
 }

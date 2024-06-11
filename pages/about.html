@@ -27,8 +27,8 @@
     <div id="home" class="banner-container">
       <img
         class="hero-img"
-        src="https://i1.sndcdn.com/visuals-000349539548-f84Ht9-t1240x260.jpg"
-        alt=""
+        src="../assets/25pikachubanner.jpeg"
+        alt="Banner image of flat design Pikachu"
       />
     </div>
     <h1>ABOUT</h1>
@@ -37,13 +37,16 @@
     <div id="about">
       <h2>About Me</h2>
       <div class="about-blurb">
-        <img src="../assets/pikachu-oldschool.png" alt="" />
+        <div class="about-img-container">
+          <img src="../assets/pikachu-oldschool.png" alt="" />
+        </div>
         <p>
           I joined my buddy Ash's party all the way back in 1997, where we
-          trained to become Pokemon Masters until 2024!
+          trained to become Pokemon Masters until
+          <span id="currentYear"></span>!
           <br />
           <br />
-          That's been about 27 years now (I'm writing this in 2024)! Since then
+          That's been about <span id="yearDelta"></span> years now! Since then
           I've dabbled in some detective work, and now I'm having an incredible
           time coding with All Star Code!
           <br />

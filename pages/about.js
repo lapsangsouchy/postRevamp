@@ -1,5 +1,14 @@
 let submitBtn = document.getElementById('usernameBtn');
 let input = document.querySelector('input');
+let currentYearSpan = document.getElementById('currentYear');
+let yearDelta = document.getElementById('yearDelta');
+
+let currentDay = new Date();
+let currentYear = currentDay.getFullYear();
+
+currentYearSpan.innerHTML = currentYear.toString();
+yearDelta.innerHTML = (currentYear - 1997).toString();
+console.log(currentYear);
 
 submitBtn.onclick = (e) => {
   e.preventDefault();

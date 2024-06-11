@@ -9,22 +9,22 @@ html body {
 nav {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
-  background-color: #ffd819;
+  align-content: center;
+  height: 70px;
+  background-color: yellow;
   margin: 0;
 }
 
 .navlinks {
   width: 50%;
-  height: 100%;
   display: flex;
   justify-content: end;
+  align-content: center;
   margin: 0;
-  flex-grow: 4;
+  /* flex-grow: 4; */
 }
 
 .navlink {
-  height: 100%;
   text-decoration: none;
   padding: 5%;
   color: white;
@@ -40,7 +40,7 @@ nav {
 }
 
 .logo {
-  width: 20vw;
+  width: 50%;
 }
 
 /* Banner */
@@ -48,10 +48,15 @@ nav {
 .banner-container {
   display: flex;
   justify-content: center;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-color: #fec200;
 }
 
 .hero-img {
   width: 100%;
+  object-fit: cover;
 }
 
 h1 {
@@ -71,13 +76,17 @@ h1 {
 }
 
 .img-container {
-  width: 50%;
-  height: auto;
+  width: 400px;
+  height: 400px;
   overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .img-container img {
-  width: 90%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .greeting {
@@ -90,12 +99,17 @@ h1 {
 }
 
 #imageToggler {
-  background-color: #ffd819;
+  background-color: yellow;
+}
+
+#instruction {
+  /* background-color: lightgreen; */
+  height: 1em;
 }
 
 /* Projects */
 #projects {
-  background-color: #ffd819;
+  background-color: yellow;
   height: 100%;
   width: 100%;
   margin: 0;
@@ -121,24 +135,40 @@ h1 {
   border: 1px solid #ccc;
   background-color: white;
   box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
 }
 
 .project-card img {
   max-width: 100%;
+  min-width: 200px;
+  height: 150px;
 }
 
 .card-text {
   padding: 0 20px 20px;
 }
 
+.card-text ul {
+  /* padding: 1.5em; */
+}
+
 .btn-container {
-  display: none;
+  display: flex;
   justify-content: center;
-  align-content: center;
+  align-content: end;
+  height: 1.5em;
+}
+
+.btn-container a {
+  text-decoration: none;
+  color: black;
 }
 
 .github-btn {
-  margin: 1rem;
+  display: none;
+  margin: 0.5rem;
 }
 
 /* About Me */
@@ -195,24 +225,71 @@ footer a {
     justify-content: center;
   }
   .img-container {
-    width: 80%;
+    width: 100%;
+    height: 250px;
   }
 
   .greeting {
     width: 80%;
   }
+
+  #about img {
+    width: 200px;
+  }
+
   .about-blurb {
     flex-direction: column;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .about-img-container {
+    display: flex;
     justify-content: center;
     align-content: center;
   }
 }
 
 @media (max-width: 470px) {
+  .logo {
+    width: 90%;
+  }
+
+  .navlinks {
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-size: 0.7rem;
+    width: 100%;
+  }
+  .navlink {
+    display: block;
+    text-align: center;
+    text-wrap: none;
+    width: 100%;
+    height: 100%;
+  }
   .img-container {
     width: 100%;
   }
   .greeting {
+    width: 100%;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+
+  #about {
+    padding: 0.5rem;
+  }
+
+  .about-blurb {
+    width: 90%;
+    padding: 1rem;
+  }
+
+  #about img {
     width: 100%;
   }
 }
