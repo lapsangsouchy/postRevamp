@@ -3,8 +3,8 @@ let audio1 = document.getElementById('audio1');
 let audio2 = document.getElementById('audio2');
 let instruction = document.getElementById('instruction');
 
-function isPlaying(audelem) {
-  return !audelem.paused;
+function isPlaying(audio) {
+  return !audio.paused;
 }
 
 const changeImage = (e) => {

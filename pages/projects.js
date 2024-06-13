@@ -23,13 +23,6 @@ for (let i = 0; i < btnContainers.length; i++) {
   buttonLink.append(githubBtn);
   btnContainers[i].append(buttonLink);
 
-  // projectCards[i].onmouseover = () => {
-  //   btnContainers[i].style.display = 'flex';
-  // };
-  // projectCards[i].onmouseout = () => {
-  //   btnContainers[i].style.display = 'none';
-  // };
-
   projectCards[i].onmouseover = () => {
     githubBtn.style.display = 'block';
   };
