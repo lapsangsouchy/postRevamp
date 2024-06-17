@@ -149,6 +149,12 @@ h1 {
   align-items: center;
 }
 
+#projectInstruction {
+  background-color: lightgreen;
+  padding: 2rem;
+  margin-top: 3rem;
+}
+
 .project-container {
   background-color: lightgrey;
   margin: 2rem;
@@ -159,7 +165,7 @@ h1 {
 }
 
 .project-card {
-  flex: 0 1 24%;
+  flex: 0 1 30%;
   margin: 15px;
   border: 1px solid #ccc;
   background-color: white;
@@ -172,15 +178,16 @@ h1 {
 .project-card img {
   max-width: 100%;
   min-width: 200px;
-  height: 150px;
+  height: 250px;
+  overflow: hidden;
 }
 
 .card-text {
   padding: 0 20px 20px;
-}
-
-.card-text ul {
-  /* padding: 1.5em; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .btn-container {
@@ -188,6 +195,7 @@ h1 {
   justify-content: center;
   align-content: end;
   height: 1.5em;
+  justify-self: end;
 }
 
 .btn-container a {
@@ -273,6 +281,15 @@ footer a {
 
   #instruction {
     width: 100%;
+  }
+
+  .project-card {
+    flex: 0 1 60%;
+  }
+
+  .project-card img {
+    height: auto;
+    overflow: inherit;
   }
 
   #about img {

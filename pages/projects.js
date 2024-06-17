@@ -1,4 +1,6 @@
 let projectCards = document.getElementsByClassName('project-card');
+let projectBlurbs = document.getElementsByClassName('blurb');
+let projectImages = document.getElementsByClassName('project-image');
 let btnContainers = document.getElementsByClassName('btn-container');
 let links = [
   'https://github.com/lapsangsouchy/mash.js',
@@ -24,9 +26,14 @@ for (let i = 0; i < btnContainers.length; i++) {
   btnContainers[i].append(buttonLink);
 
   projectCards[i].onmouseover = () => {
+    projectBlurbs[i].style.opacity = 0.5;
+    projectImages[i].style.opacity = 0.5;
     githubBtn.style.display = 'block';
   };
   projectCards[i].onmouseout = () => {
+    projectBlurbs[i].style.opacity = 1;
+    projectImages[i].style.opacity = 1;
+
     githubBtn.style.display = 'none';
   };
 }
