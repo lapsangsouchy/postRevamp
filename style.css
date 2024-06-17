@@ -117,11 +117,23 @@ h1 {
 
 #imageToggler {
   background-color: yellow;
+  height: 3em;
+  width: 50%;
+  align-self: center;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 5px;
 }
 
 #instruction {
-  /* background-color: lightgreen; */
-  height: 1em;
+  background-color: lightgreen;
+  visibility: hidden;
+  width: 50%;
+  align-self: center;
+  border-radius: 5px;
+  height: 3em;
+  margin: 5px;
+  padding: 5px;
 }
 
 /* Projects */
@@ -255,6 +267,14 @@ footer a {
     width: 80%;
   }
 
+  #imageToggler {
+    width: 100%;
+  }
+
+  #instruction {
+    width: 100%;
+  }
+
   #about img {
     width: 200px;
   }
@@ -294,6 +314,14 @@ footer a {
     width: 100%;
   }
   .greeting {
+    width: 100%;
+  }
+
+  #imageToggler {
+    width: 100%;
+  }
+
+  #instruction {
     width: 100%;
   }
 

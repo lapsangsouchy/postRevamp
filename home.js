@@ -1,6 +1,11 @@
 let imageToggler = document.getElementById('imageToggler');
 let audio1 = document.getElementById('audio1');
 let audio2 = document.getElementById('audio2');
+
+// Audio volume adjust so people on headphones won't have their ears hurt
+audio1.volume = 0.2;
+audio2.volume = 0.2;
+
 let instruction = document.getElementById('instruction');
 
 function isPlaying(audio) {
@@ -19,8 +24,8 @@ const changeImage = (e) => {
     // Change image
     changingImage.src = './assets/pikachuJump1.png';
     //Add new text
-    instruction.style.backgroundColor = 'lightgreen';
-    instruction.innerHTML = 'Now click the new image for something cool!';
+    instruction.style.visibility = 'visible';
+
     // Onmousedown
     changingImage.onmousedown = () => {
       changingImage.src = './assets/pikachuJump2.png';
@@ -45,8 +50,7 @@ const changeImage = (e) => {
     changingImage.src = 'https://pbs.twimg.com/media/C5e2Al2UYAExILo.jpg';
     changingImage.onmousedown = null;
     changingImage.onmouseup = null;
-    instruction.style.backgroundColor = 'transparent';
-    instruction.innerHTML = '';
+    instruction.style.visibility = 'hidden';
   }
 };
 
