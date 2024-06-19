@@ -1,21 +1,21 @@
+/* Select Elements to Change */
+
 let imageToggler = document.getElementById('imageToggler');
+let instruction = document.getElementById('instruction');
 let audio1 = document.getElementById('audio1');
 let audio2 = document.getElementById('audio2');
 
-// Audio volume adjust so people on headphones won't have their ears hurt
+/* Turn volume audio down */
+
 audio1.volume = 0.2;
 audio2.volume = 0.2;
 
-let instruction = document.getElementById('instruction');
-
-function isPlaying(audio) {
-  return !audio.paused;
-}
+/* Create Event Handlers for mousedown and mouseup */
 
 const mousedownHandler = (changingImage) => {
   changingImage.src = './assets/pikachuJump2.png';
 
-  if (isPlaying(audio2)) {
+  if (!audio2.paused) {
     audio2.pause();
     audio2.currentTime = 0;
   }
@@ -24,12 +24,14 @@ const mousedownHandler = (changingImage) => {
 
 const mouseupHandler = (changingImage) => {
   changingImage.src = './assets/pikachuJump1.png';
-  if (isPlaying(audio1)) {
+  if (!audio1.paused) {
     audio1.pause();
     audio1.currentTime = 0;
   }
   audio2.play();
 };
+
+/* Callback Function to Toggle First Image and Add New Event Listeners */
 
 const changeImage = (e) => {
   e.preventDefault();
@@ -42,9 +44,11 @@ const changeImage = (e) => {
   if (changingImage.src === 'https://pbs.twimg.com/media/C5e2Al2UYAExILo.jpg') {
     // Change image
     changingImage.src = './assets/pikachuJump1.png';
-    //Add new text
+
+    // Add new text
     instruction.style.visibility = 'visible';
 
+    // Add event listeners to both the image and button
     changingImage.onmousedown = () => {
       mousedownHandler(changingImage);
     };
@@ -60,28 +64,8 @@ const changeImage = (e) => {
     instruction.onmouseup = () => {
       mouseupHandler(changingImage);
     };
-
-    // // Onmousedown
-    // changingImage.onmousedown = () => {
-    //   changingImage.src = './assets/pikachuJump2.png';
-
-    //   if (isPlaying(audio2)) {
-    //     audio2.pause();
-    //     audio2.currentTime = 0;
-    //   }
-    //   audio1.play();
-    // };
-    // // Onmouseup
-    // changingImage.onmouseup = () => {
-    //   changingImage.src = './assets/pikachuJump1.png';
-    //   if (isPlaying(audio1)) {
-    //     audio1.pause();
-    //     audio1.currentTime = 0;
-    //   }
-    //   audio2.play();
-    // };
   } else {
-    // Otherwise, change everything back
+    // Otherwise, change everything back to normal
     changingImage.src = 'https://pbs.twimg.com/media/C5e2Al2UYAExILo.jpg';
     changingImage.onmousedown = null;
     changingImage.onmouseup = null;
@@ -89,4 +73,5 @@ const changeImage = (e) => {
   }
 };
 
+/* Add Event Listener to Toggle Button */
 imageToggler.onclick = changeImage;

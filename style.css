@@ -23,13 +23,9 @@ nav {
   flex-wrap: wrap;
   align-content: center;
   margin: 0;
-  /* flex-grow: 4; */
 }
 
 .navlink {
-  /* display: block; */
-  /* height: 100%; */
-  /* width: 100%; */
   display: flex;
   justify-content: center;
   align-content: center;
@@ -42,10 +38,6 @@ nav {
 .navlink div {
   height: 100%;
   width: 100%;
-  /* padding: 5%; */
-  /* display: flex;
-  justify-content: center;
-  align-content: center; */
   text-align: center;
 }
 
@@ -118,7 +110,7 @@ h1 {
 #imageToggler {
   background-color: yellow;
   height: 3em;
-  width: 50%;
+  width: 60%;
   align-self: center;
   border-radius: 5px;
   margin: 5px;
@@ -128,7 +120,7 @@ h1 {
 #instruction {
   background-color: lightgreen;
   visibility: hidden;
-  width: 50%;
+  width: 60%;
   align-self: center;
   border-radius: 5px;
   height: 3em;
@@ -137,6 +129,7 @@ h1 {
 }
 
 /* Projects */
+
 #projects {
   background-color: yellow;
   height: 100%;
@@ -324,15 +317,6 @@ footer a {
 
   .navlinks {
     font-size: 0.7rem;
-    /* height: 70px; */
-  }
-
-  .navlink {
-    /* height: 100%; */
-  }
-
-  .navlink div {
-    /* height: 100%; */
   }
 
   .img-container {
